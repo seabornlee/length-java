@@ -36,7 +36,6 @@ public class Length {
                 length = new Length(value, targetUnit);
             } else if (targetUnit == Units.YARD) {
                 value = this.value / 36;
-                length = new Length(value, targetUnit);
             }
         }
 
