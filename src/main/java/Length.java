@@ -15,23 +15,28 @@ public class Length {
                 value = this.value / 3;
                 length = new Length(value, targetUnit);
             } else if (targetUnit == Units.INCH) {
-                length = new Length(this.value * 12, targetUnit);
+                value = this.value * 12;
+                length = new Length(value, targetUnit);
             }
         }
 
         if (this.unit == Units.YARD) {
             if (targetUnit == Units.INCH) {
-                length = new Length(this.value * 36, targetUnit);
+                value = this.value * 36;
+                length = new Length(value, targetUnit);
             } else if (targetUnit == Units.FOOT){
-                length = new Length(this.value * 3, targetUnit);
+                value = this.value * 3;
+                length = new Length(value, targetUnit);
             }
         }
 
         if (this.unit == Units.INCH) {
             if (targetUnit == Units.FOOT) {
-                length = new Length(this.value / 12, targetUnit);
+                value = this.value / 12;
+                length = new Length(value, targetUnit);
             } else if (targetUnit == Units.YARD) {
-                length = new Length(this.value / 36, targetUnit);
+                value = this.value / 36;
+                length = new Length(value, targetUnit);
             }
         }
 
