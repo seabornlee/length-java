@@ -11,7 +11,7 @@ public class Length {
         String unit = u;
         Length len = this;
         if (this.unit.equals("f")) {
-            if (u.equals("yard")) {
+            if (unit.equals("yard")) {
                 len = new Length(this.value / 3, u);
             } else if (u.equals("inch")) {
                 len = new Length(this.value * 12, u);
