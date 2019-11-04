@@ -36,10 +36,6 @@ public class Length {
         return length;
     }
 
-    public double getVal() {
-        return this.getValue();
-    }
-
     public double getValue() {
         return this.value;
     }
