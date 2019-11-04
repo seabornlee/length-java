@@ -34,7 +34,7 @@ public class Length {
             if (targetUnit == Units.FOOT) {
                 value = this.value / 12;
             } else if (targetUnit == Units.YARD) {
-                value = this.value / 36;
+                return this.value / 36;
             }
         }
         return value;
