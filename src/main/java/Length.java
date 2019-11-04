@@ -8,7 +8,7 @@ public class Length {
     }
 
     public Length as(Units targetUnit) {
-        Length length = this;
+        Length length = new Length(this.value, targetUnit);
         if (this.unit == Units.FOOT) {
             if (targetUnit == Units.YARD) {
                 length = new Length(this.value / 3, targetUnit);
