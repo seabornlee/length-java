@@ -8,7 +8,7 @@ public class LengthTest {
     public void should_1_inch_equals_1_inch() {
         Length result = new Length(1, "inch").as("inch");
 
-        assertThat(result.getVal(), is(1.0));
+        assertThat(result.getValue(), is(1.0));
         assertThat(result.getUinnt(), is("inch"));
     }
 
