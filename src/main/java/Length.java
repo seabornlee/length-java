@@ -9,7 +9,7 @@ public class Length {
 
     public Length as(Units targetUnit) {
         Length length = this;
-        if (this.unit == Units.F) {
+        if (this.unit == Units.FOOT) {
             if (targetUnit == Units.YARD) {
                 length = new Length(this.value / 3, targetUnit);
             } else if (targetUnit == Units.INCH) {
@@ -20,13 +20,13 @@ public class Length {
         if (this.unit == Units.YARD) {
             if (targetUnit == Units.INCH) {
                 length = new Length(this.value * 36, targetUnit);
-            } else if (targetUnit == Units.F){
+            } else if (targetUnit == Units.FOOT){
                 length = new Length(this.value * 3, targetUnit);
             }
         }
 
         if (this.unit == Units.INCH) {
-            if (targetUnit == Units.F) {
+            if (targetUnit == Units.FOOT) {
                 length = new Length(this.value / 12, targetUnit);
             } else if (targetUnit == Units.YARD) {
                 length = new Length(this.value / 36, targetUnit);
