@@ -7,8 +7,7 @@ public class Length {
         this.unit = unit;
     }
 
-    public Length as(String u) {
-        String unit = u;
+    public Length as(String unit) {
         Length len = this;
         if (this.unit.equals("f")) {
             if (unit.equals("yard")) {
