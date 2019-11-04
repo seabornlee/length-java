@@ -1,11 +1,9 @@
 public class Length {
     private final double value;
-    private final String unit;
     private final Units currentUnit;
 
     public Length(double value, String unit) {
         this.value = value;
-        this.unit = unit;
         this.currentUnit = Units.valueOf(unit.toUpperCase());
     }
 
@@ -41,10 +39,6 @@ public class Length {
 
     public double getValue() {
         return this.value;
-    }
-
-    public String getUnit() {
-        return this.unit;
     }
 
     public Units temp_getUnit() {
