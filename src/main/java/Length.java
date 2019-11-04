@@ -8,8 +8,12 @@ public class Length {
     }
 
     public Length as(String unit) {
-        Length length = this;
+        return temp_as(unit);
+    }
+
+    public Length temp_as(String unit) {
         Units targetUnit = Units.valueOf(unit.toUpperCase());
+        Length length = this;
         if (this.unit == Units.F) {
             if (targetUnit == Units.YARD) {
                 length = new Length(this.value / 3, targetUnit);
