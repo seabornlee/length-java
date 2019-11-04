@@ -9,6 +9,7 @@ public class Length {
 
     public Length as(String unit) {
         Length length = this;
+        Units targetUnit = Units.valueOf(unit.toUpperCase());
         if (this.unit.equals("f")) {
             if (unit.equals("yard")) {
                 length = new Length(this.value / 3, unit);
