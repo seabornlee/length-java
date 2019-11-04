@@ -16,7 +16,9 @@ public class Length {
         if (this.unit == Units.FOOT) {
             if (targetUnit == Units.YARD) {
                 return this.value / 3;
-            } else if (targetUnit == Units.INCH) {
+            }
+
+            if (targetUnit == Units.INCH) {
                 return this.value * 12;
             }
         }
@@ -24,7 +26,9 @@ public class Length {
         if (this.unit == Units.YARD) {
             if (targetUnit == Units.INCH) {
                 return this.value * 36;
-            } else if (targetUnit == Units.FOOT){
+            }
+
+            if (targetUnit == Units.FOOT){
                 return this.value * 3;
             }
         }
@@ -32,10 +36,13 @@ public class Length {
         if (this.unit == Units.INCH) {
             if (targetUnit == Units.FOOT) {
                 return this.value / 12;
-            } else if (targetUnit == Units.YARD) {
+            }
+
+            if (targetUnit == Units.YARD) {
                 return this.value / 36;
             }
         }
+
         return this.value;
     }
 
