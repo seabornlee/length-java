@@ -41,7 +41,7 @@ public class Length {
         return this.value;
     }
 
-    public Units temp_getUnit() {
+    public Units getUnit() {
         return this.currentUnit;
     }
 }
