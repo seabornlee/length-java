@@ -12,7 +12,8 @@ public class Length {
         Length length = new Length(value, targetUnit);
         if (this.unit == Units.FOOT) {
             if (targetUnit == Units.YARD) {
-                length = new Length(this.value / 3, targetUnit);
+                value = this.value / 3;
+                length = new Length(value, targetUnit);
             } else if (targetUnit == Units.INCH) {
                 length = new Length(this.value * 12, targetUnit);
             }
