@@ -40,10 +40,6 @@ public class Length {
         return this.value;
     }
 
-    public String getUinnt() {
-        return this.getUnit();
-    }
-
     public String getUnit() {
         return this.unit;
     }
