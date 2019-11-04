@@ -40,7 +40,7 @@ public class Length {
             }
         }
 
-        return length;
+        return new Length(value, targetUnit);
     }
 
     public double getValue() {
