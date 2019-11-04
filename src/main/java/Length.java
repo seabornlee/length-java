@@ -11,7 +11,7 @@ public class Length {
         Length length = this;
         Units targetUnit = Units.valueOf(unit.toUpperCase());
         if (this.unit.equals("f")) {
-            if (unit.equals("yard")) {
+            if (targetUnit == Units.YARD) {
                 length = new Length(this.value / 3, unit);
             } else if (unit.equals("inch")) {
                 length = new Length(this.value * 12, unit);
