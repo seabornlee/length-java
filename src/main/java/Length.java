@@ -2,10 +2,6 @@ public class Length {
     private final double value;
     private final Units unit;
 
-    public Length(double value, String unit) {
-        this(value, Units.valueOf(unit.toUpperCase()));
-    }
-
     public Length(double value, Units unit) {
         this.value = value;
         this.unit = unit;
