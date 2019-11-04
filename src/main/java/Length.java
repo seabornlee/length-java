@@ -12,7 +12,7 @@ public class Length {
     public Length as(String unit) {
         Length length = this;
         Units targetUnit = Units.valueOf(unit.toUpperCase());
-        if (this.unit.equals("f")) {
+        if (this.currentUnit == Units.F) {
             if (targetUnit == Units.YARD) {
                 length = new Length(this.value / 3, unit);
             } else if (targetUnit == Units.INCH) {
@@ -20,7 +20,7 @@ public class Length {
             }
         }
 
-        if (this.unit.equals("yard")) {
+        if (this.currentUnit == Units.YARD) {
             if (targetUnit == Units.INCH) {
                 length = new Length(this.value * 36, unit);
             } else if (targetUnit == Units.F){
@@ -28,7 +28,7 @@ public class Length {
             }
         }
 
-        if (this.unit.equals("inch")) {
+        if (this.currentUnit == Units.INCH) {
             if (targetUnit == Units.F) {
                 length = new Length(this.value / 12, unit);
             } else if (targetUnit == Units.YARD) {
