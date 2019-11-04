@@ -7,10 +7,6 @@ public class Length {
         this.unit = unit;
     }
 
-    public Length as(String unit) {
-        return temp_as(Units.valueOf(unit.toUpperCase()));
-    }
-
     public Length temp_as(Units targetUnit) {
         Length length = this;
         if (this.unit == Units.F) {
